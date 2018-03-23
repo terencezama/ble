@@ -1,0 +1,40 @@
+{
+  "_from": "github:terencezama/ble",
+  "_id": "react-native-tz-ble@1.0.0",
+  "_inBundle": false,
+  "_location": "/react-native-tz-ble",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "react-native-tz-ble@github:terencezama/ble",
+    "name": "react-native-tz-ble",
+    "escapedName": "react-native-tz-ble",
+    "rawSpec": "github:terencezama/ble",
+    "saveSpec": "github:terencezama/ble",
+    "fetchSpec": null,
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "github:terencezama/ble#a003c24838dee4c128e2c0a91879a0bfd778382a",
+  "_spec": "react-native-tz-ble@github:terencezama/ble",
+  "_where": "/Users/Terence/dualphone",
+  "author": "",
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "## Getting started",
+  "keywords": [
+    "react-native"
+  ],
+  "license": "",
+  "main": "index.js",
+  "name": "react-native-tz-ble",
+  "peerDependencies": {
+    "react-native": "^0.41.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
