@@ -59,7 +59,7 @@ public class BlePeripheralManager {
     private BlePeripheralManager() {
 
     }
-    private void initialize(ReactApplicationContext context){
+    public void initialize(ReactApplicationContext context){
         this.context = context;
 
         services.clear();
