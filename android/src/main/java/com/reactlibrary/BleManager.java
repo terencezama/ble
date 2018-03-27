@@ -7,7 +7,7 @@ package com.reactlibrary;
 public class BleManager {
     private static final BleManager ourInstance = new BleManager();
 
-    public static BleManager getInstance() {
+    public static BleManager shared() {
         return ourInstance;
     }
 

@@ -7,7 +7,7 @@ package com.reactlibrary;
 public class BlePeripheralManager {
     private static final BlePeripheralManager ourInstance = new BlePeripheralManager();
 
-    public static BlePeripheralManager getInstance() {
+    public static BlePeripheralManager shared() {
         return ourInstance;
     }
 

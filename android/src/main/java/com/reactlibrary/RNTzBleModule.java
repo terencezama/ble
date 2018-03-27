@@ -23,6 +23,10 @@ public class RNTzBleModule extends ReactContextBaseJavaModule {
     return "RNTzBle";
   }
 
+
+
+
+  //region Constants
   @Override
   public Map<String, Object> getConstants() {
     final Map<String, Object> constants = new HashMap<>();
@@ -30,4 +34,32 @@ public class RNTzBleModule extends ReactContextBaseJavaModule {
 //    constants.put(DURATION_LONG_KEY, Toast.LENGTH_LONG);
     return constants;
   }
+  //endregion
+
+  //region Peripheral Manager
+  @ReactMethod
+  public void pm_init() {
+
+  }
+
+  @ReactMethod
+  public void pm_createService(String uuid, Boolean primary){
+
+  }
+
+  @ReactMethod
+  public void pm_appendCharacteristic(String characteristicId, String serviceId){
+
+  }
+
+  @ReactMethod
+  public void pm_addService(String serviceId){
+
+  }
+
+  @ReactMethod
+  public void pm_advertise(){
+
+  }
+  //endregion
 }
