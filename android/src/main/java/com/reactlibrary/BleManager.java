@@ -13,4 +13,6 @@ public class BleManager {
 
     private BleManager() {
     }
+
+
 }

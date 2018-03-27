@@ -5,6 +5,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
+import com.facebook.react.bridge.ReadableMap;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,17 +25,35 @@ public class RNTzBleModule extends ReactContextBaseJavaModule {
   }
 
 
+  //region enums
+  public enum ManagerState{
+    Unknown,
+    Resetting,
+    Unsupported,
+    Unauthorized,
+    PoweredOff,
+    PoweredOn,
+  }
+  //endregion
+
 
 
   //region Constants
   @Override
   public Map<String, Object> getConstants() {
     final Map<String, Object> constants = new HashMap<>();
-//    constants.put(DURATION_SHORT_KEY, Toast.LENGTH_SHORT);
-//    constants.put(DURATION_LONG_KEY, Toast.LENGTH_LONG);
+    constants.put("ManagerStateUnknown" , ManagerState.Unknown);
+    constants.put("ManagerStateResetting" , ManagerState.Resetting);
+    constants.put("ManagerStateUnsupported" , ManagerState.Unsupported);
+    constants.put("ManagerStateUnauthorized" , ManagerState.Unauthorized);
+    constants.put("ManagerStatePoweredOff" , ManagerState.PoweredOff);
+    constants.put("ManagerStatePoweredOn" , ManagerState.PoweredOn);
+
     return constants;
   }
   //endregion
+
+
 
   //region Peripheral Manager
   @ReactMethod
@@ -44,6 +63,10 @@ public class RNTzBleModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void pm_createService(String uuid, Boolean primary){
+
+  }
+  @ReactMethod
+  public void pm_createCharacteristic(String uuid,int properties, int permission,ReadableMap value){
 
   }
 
