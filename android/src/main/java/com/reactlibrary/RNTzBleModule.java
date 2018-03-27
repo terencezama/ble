@@ -1,6 +1,9 @@
 
 package com.reactlibrary;
 
+import android.bluetooth.BluetoothGatt;
+import android.bluetooth.BluetoothGattCharacteristic;
+
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -51,6 +54,20 @@ public class RNTzBleModule extends ReactContextBaseJavaModule {
     constants.put("ManagerStateUnauthorized" , ManagerState.Unauthorized.ordinal());
     constants.put("ManagerStatePoweredOff" , ManagerState.PoweredOff.ordinal());
     constants.put("ManagerStatePoweredOn" , ManagerState.PoweredOn.ordinal());
+
+    constants.put("PermissionsReadable", BluetoothGattCharacteristic.PERMISSION_READ);
+    constants.put("PermissionsWriteable", BluetoothGattCharacteristic.PERMISSION_WRITE);
+    constants.put("PermissionsReadEncryptionRequired", BluetoothGattCharacteristic.PERMISSION_READ_ENCRYPTED);
+    constants.put("PermissionsWriteEncryptionRequired", BluetoothGattCharacteristic.PERMISSION_WRITE_ENCRYPTED);
+
+    constants.put("CharacteristicBroadcast", BluetoothGattCharacteristic.PROPERTY_BROADCAST);
+    constants.put("CharacteristicRead", BluetoothGattCharacteristic.PROPERTY_READ);
+    constants.put("CharacteristicWriteWithoutResponse", BluetoothGattCharacteristic.PROPERTY_WRITE_NO_RESPONSE);
+    constants.put("CharacteristicWrite", BluetoothGattCharacteristic.PROPERTY_WRITE);
+    constants.put("CharacteristicNotify", BluetoothGattCharacteristic.PROPERTY_NOTIFY);
+    constants.put("CharacteristicIndicate", BluetoothGattCharacteristic.PROPERTY_INDICATE);
+    constants.put("CharacteristicAuthenticatedSignedWrites", BluetoothGattCharacteristic.PROPERTY_SIGNED_WRITE);
+    constants.put("CharacteristicExtendedProperties", BluetoothGattCharacteristic.PROPERTY_EXTENDED_PROPS);
 
     return constants;
   }

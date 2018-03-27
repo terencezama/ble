@@ -69,7 +69,12 @@ public class BlePeripheralManager {
             manager = (BluetoothManager) context.getSystemService(Context.BLUETOOTH_SERVICE);
         }
 
-        if(context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE) == false || manager == null){
+        if(manager == null){
+            pm_notify(didUpdateStateEvent(RNTzBleModule.ManagerState.Unknown));
+            return;
+        }
+
+        if(context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE) == false){
             pm_notify(didUpdateStateEvent(RNTzBleModule.ManagerState.Unsupported));
             return;
         }
@@ -82,7 +87,7 @@ public class BlePeripheralManager {
             return;
         }
 
-        if(adapter.isMultipleAdvertisementSupported() == false){
+        if(adapter.isMultipleAdvertisementSupported() == false ){
             pm_notify(didUpdateStateEvent(RNTzBleModule.ManagerState.Unsupported));
             return;
         }
